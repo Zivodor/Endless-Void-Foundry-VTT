@@ -23,7 +23,7 @@
   "primaryTokenAttribute": "attributes.health",
   "secondaryTokenAttribute": "attributes.stamina",
   "url": "https://github.com/Zivodor/Endless-Void-Foundry-VTT/blob/master/README.md",
-  "manifest": "https://github.com/Zivodor/Endless-Void-Foundry-VTT/blob/master/system.json",
+  "manifest": "https://raw.githubusercontent.com/Zivodor/Endless-Void-Foundry-VTT/master/system.json",
   "download": "https://github.com/Zivodor/Endless-Void-Foundry-VTT/archive/master.zip",
   "license": "LICENSE.txt"
 }

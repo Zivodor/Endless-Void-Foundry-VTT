@@ -1,7 +1,7 @@
 {
   "name": "endlessvoid",
-  "title": "Endless Void",
-  "description": "The Endless Void system for FoundryVTT!",
+  "title": "Endless Void - Pre-Release",
+  "description": "The Pre-Release version of the Endless Void system for FoundryVTT!",
   "version": "0.0.1",
   "minimumCoreVersion": "0.6.5",
   "compatibleCoreVersion": "0.6.5",
@@ -22,8 +22,8 @@
   "gridUnits": "ft",
   "primaryTokenAttribute": "attributes.health",
   "secondaryTokenAttribute": "attributes.stamina",
-  "url": "https://github.com/Zivodor/Endless-Void-Foundry-VTT/blob/master/README.md",
-  "manifest": "https://raw.githubusercontent.com/Zivodor/Endless-Void-Foundry-VTT/master/system.json",
-  "download": "https://github.com/Zivodor/Endless-Void-Foundry-VTT/archive/master.zip",
+  "url": "https://github.com/Zivodor/Endless-Void-Foundry-VTT/blob/pre-release/README.md",
+  "manifest": "https://raw.githubusercontent.com/Zivodor/Endless-Void-Foundry-VTT/pre-release/system.json",
+  "download": "https://github.com/Zivodor/Endless-Void-Foundry-VTT/archive/pre-release.zip",
   "license": "LICENSE.txt"
 }

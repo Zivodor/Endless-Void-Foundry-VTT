@@ -109,7 +109,7 @@
   {{!-- Sheet Tab Navigation --}}
   <nav class="sheet-tabs sheet-navigation tabs" data-group="primary">
       <a class="item" data-tab="attributes">Attributes</a>
-      <a class="item" data-tab="description">Description</a>
+      <a class="item" data-tab="skillsets">Skill Sets</a>
       <a class="item" data-tab="items">Items</a>
   </nav>
 
@@ -117,7 +117,7 @@
   <section class="sheet-body">
 
         {{!--Attributes Tab--}}
-        <div class="tab abilities flexrow" data-group="primary" data-tab="attributes">
+        <div class="tab abilities flexcol" data-group="primary" data-tab="attributes">
             {{!-- Potential Scores & Skills--}}
             <ul class="ability-scores flexrow">
             {{#each data.potentials as |potential p|}}
@@ -128,6 +128,7 @@
                         <input class="ability-score" name="data.potentials.{{p}}.value" type="text" value="{{potential.value}}" data-dtype="Number" placeholder="10"/>
                         <input type="hidden" name="data.potentials.{{p}}.proficient" value="{{potential.proficient}}" data-dtype="Number"/>
                     </div>
+                    {{#if potential.skills}}
                     <ul class="skills-list">
                         {{#each potential.skills as |skill s|}}
                             <li class="skill flexrow {{#if skill.value}}proficient{{/if}}" data-skill="{{p}}.{{s}}">
@@ -138,46 +139,47 @@
                             </li>
                         {{/each}}
                     </ul>
-                </li>
-            {{/each}}
-            </ul>
-            
-            {{!-- Non Potential Skills --}}
-            <ul class="ability-scores">
-                <div class="form-group spellcasting-ability">
-                    <label>{{localize "ENDLESSVOID.SkillSetPotential"}}</label>
-                    <select name="data.skillSetPotential" data-type="String">
-                        {{#select data.skillSetPotential}}
-                        <option value="">{{localize "ENDLESSVOID.None"}}</option>
-                        {{#each data.potentials as |potential p|}}
-                        <option value="{{p}}">{{localize potential.label}}</option>
-                        {{/each}}
-                        {{/select}}
-                    </select>
-                </div>
-            {{#each data.skillsets as |skillset g|}}
-                <li class="flexrow">
-                    <div class="ability" data-ability="{{g}}">
-                        <h4 class="ability-name box-title" da data-label="data.skillsets.{{g}}.label">{{localize skillset.label}}</h4>
-                    </div>
-                    <ul class="skills-list">
-                    {{#each skillset.skills as |skill s|}}
-                        <li class="skill flexrow {{#if skill.value}}proficient{{/if}}" data-skill="{{g}}.{{s}}">
-                            <input type="hidden" name="data.skillsets.{{g}}.skills.{{s}}.value" value="{{skill.value}}" data-dtype="Number"/>
-                            <a class="proficiency-toggle skill-proficiency" title="{{localize skill.hover}}">{{{skill.icon}}}</a>
-                            <h4 class="skill-name rollable" data-roll="d20+{{skill.total}}" data-label="{{localize skill.label}}">{{localize skill.label}}</h4>
-                            <span class="skill-mod">{{numberFormat skill.total decimals=0 sign=true}}</span>
-                        </li>
-                    {{/each}}
-                    </ul>
+                    {{/if}}
                 </li>
             {{/each}}
             </ul>
         </div>
 
-      {{!-- Biography Tab --}}
-      <div class="tab biography flexcol" data-group="primary" data-tab="description">
-          {{editor content=data.biography target="data.biography" button=true owner=owner editable=editable}}
+      {{!-- Skill Set Tab --}}
+      <div class="tab abilities flexcol" data-group="primary" data-tab="skillsets">
+            
+        {{!-- Non Potential Skills --}}
+        <div class="form-group spellcasting-ability flexrow">
+            <label>{{localize "ENDLESSVOID.SkillSetPotential"}}</label>
+            <select name="data.skillSetPotential" data-type="String">
+                {{#select data.skillSetPotential}}
+                <option value="">{{localize "ENDLESSVOID.None"}}</option>
+                {{#each data.potentials as |potential p|}}
+                <option value="{{p}}">{{localize potential.label}}</option>
+                {{/each}}
+                {{/select}}
+            </select>
+            <span style="flex:5;"></span>
+        </div>
+        <div class="flexrow">
+            {{#each data.skillsets as |skillset g|}}
+            <div class="skillsets flexcol">
+                <div class="ability" data-ability="{{g}}">
+                    <h4 class="ability-name box-title" da data-label="data.skillsets.{{g}}.label">{{localize skillset.label}}</h4>
+                </div>
+                <ul class="skills-list">
+                {{#each skillset.skills as |skill s|}}
+                    <li class="skill flexrow {{#if skill.value}}proficient{{/if}}" data-skill="{{g}}.{{s}}">
+                        <input type="hidden" name="data.skillsets.{{g}}.skills.{{s}}.value" value="{{skill.value}}" data-dtype="Number"/>
+                        <a class="proficiency-toggle skill-proficiency" title="{{localize skill.hover}}">{{{skill.icon}}}</a>
+                        <h4 class="skill-name rollable" data-roll="d20+{{skill.total}}" data-label="{{localize skill.label}}">{{localize skill.label}}</h4>
+                        <span class="skill-mod">{{numberFormat skill.total decimals=0 sign=true}}</span>
+                    </li>
+                {{/each}}
+                </ul>
+            </div>
+            {{/each}}
+        </div>
       </div>
 
       {{!-- Owned Items Tab --}}

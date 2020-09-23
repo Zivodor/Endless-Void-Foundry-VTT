@@ -79,6 +79,10 @@
             "wtr": {
               "value": 0,
               "ability": "agi"
+            },
+            "stl":{
+              "value":0,
+              "ability":"agi"
             }
           }
         },

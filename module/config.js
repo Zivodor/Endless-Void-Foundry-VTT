@@ -46,6 +46,7 @@ ENDLESSVOID.potentialAbbreviations = {
 ENDLESSVOID.skills = {
   "acr": "ENDLESSVOID.SkillAcrobatics",
   "fin": "ENDLESSVOID.SkillFinesse",
+  "stl": "ENDLESSVOID.SkillStealth",
   
   "air": "ENDLESSVOID.SkillAircraft",
   "gnd": "ENDLESSVOID.SkillGroundcraft",

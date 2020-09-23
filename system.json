@@ -1,8 +1,8 @@
 {
   "name": "endlessvoid",
-  "title": "Endless Void Alpha",
-  "description": "The Alpha release of the Endless Void system for FoundryVTT!",
-  "version": "0.0.1",
+  "title": "Endless Void - Alpha",
+  "description": "The Alpha version of the Endless Void system for FoundryVTT!",
+  "version": "0.0.1a",
   "minimumCoreVersion": "0.6.5",
   "compatibleCoreVersion": "0.6.5",
   "templateVersion": 2,

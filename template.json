@@ -1,0 +1,284 @@
+{
+  "Actor": {
+    "types": ["character"],
+    "templates": {
+      "base": {
+
+      }
+    },
+    "character": {
+      "templates": ["base"],
+      "biography": "",
+      "attributes":{
+        "health": {
+          "value": 10,
+          "min": 0,
+          "max": 10
+        },
+        "stamina": {
+          "value": 10,
+          "min": 0,
+          "max": 10
+        },
+        "hitdice":{
+          "value":1
+        },
+        "armorclass":{
+          "value":10
+        },
+        "speed":{
+          "value":30
+        },
+        "vigilance":{
+          "value": 2
+        }
+      },
+      "details": {
+        "level": {
+          "value": 1
+        },
+        "cp":{
+          "value":1
+        }
+      },    
+      "potentials": {
+        "fort":{
+          "value":10
+        },
+        "sta":{
+          "value":10
+        },
+        "agi":{
+          "value":10,
+          "isVigilance":true,
+          "skills":{
+            "acr": {
+              "value": 0,
+              "ability": "agi"
+            },
+            "fin": {
+              "value": 0,
+              "ability": "agi"
+            },
+            "air": {
+              "value": 0,
+              "ability": "agi"
+            },
+            "gnd": {
+              "value": 0,
+              "ability": "agi"
+            },
+            "mech": {
+              "value": 0,
+              "ability": "agi"
+            },
+            "spc": {
+              "value": 0,
+              "ability": "agi"
+            },
+            "wtr": {
+              "value": 0,
+              "ability": "agi"
+            }
+          }
+        },
+        "ins":{
+          "value":10,
+          "isVigilance":true,
+          "skills":{
+            "int": {
+              "value": 0,
+              "ability": "ins"
+            },
+            "prc": {
+              "value": 0,
+              "ability": "ins"
+            },
+            "air": {
+              "value": 0,
+              "ability": "ins"
+            },
+            "gnd": {
+              "value": 0,
+              "ability": "ins"
+            },
+            "mech": {
+              "value": 0,
+              "ability": "ins"
+            },
+            "spc": {
+              "value": 0,
+              "ability": "ins"
+            },
+            "wtr": {
+              "value": 0,
+              "ability": "ins"
+            },
+            "sur": {
+              "value": 0,
+              "ability": "ins"
+            }
+          }
+        },
+        "int":{
+          "value":10,
+          "skills":{
+            "agn": {
+              "value": 0,
+              "ability": "int"
+            },
+            "cmp": {
+              "value": 0,
+              "ability": "int"
+            },
+            "ast": {
+              "value": 0,
+              "ability": "int"
+            },
+            "bio": {
+              "value": 0,
+              "ability": "int"
+            },
+            "his": {
+              "value": 0,
+              "ability": "int"
+            },
+            "med": {
+              "value": 0,
+              "ability": "int"
+            },
+            "tech": {
+              "value": 0,
+              "ability": "int"
+            },
+            "xen": {
+              "value": 0,
+              "ability": "int"
+            },
+            "rep": {
+              "value": 0,
+              "ability": "int"
+            }
+          }
+        },
+        "pre":{
+          "value":10,
+          "skills":{
+            "coe": {
+              "value": 0,
+              "ability": "pre"
+            },
+            "dec": {
+              "value": 0,
+              "ability": "pre"
+            },
+            "per": {
+              "value": 0,
+              "ability": "pre"
+            },
+            "wil": {
+              "value": 0,
+              "ability": "pre"
+            }
+          }
+        },
+        "str":{
+          "value":10,
+          "skills":{
+            "bnw": {
+              "value": 0,
+              "ability": "str"
+            }
+          }
+        }
+      },
+      "skillsets": {
+        "sys":{
+          "skills":{          
+            "gun":{
+              "value": 0
+            },
+            "lfe":{
+              "value": 0
+            },
+            "nav":{
+              "value": 0
+            },
+            "sen":{
+              "value": 0
+            },
+            "shl":{
+              "value": 0
+            },
+            "skp":{
+              "value": 0
+            },
+            "sub":{
+              "value": 0
+            }
+          }
+        },
+        "wpn":{
+          "skills":{
+            "bld":{
+              "value": 0
+            },
+            "clb":{
+              "value": 0
+            },
+            "ele":{
+              "value": 0
+            },
+            "ene":{
+              "value": 0
+            },
+            "exo":{
+              "value": 0
+            },
+            "kin":{
+              "value": 0
+            },
+            "pla":{
+              "value": 0
+            },
+            "son":{
+              "value": 0
+            },
+            "urm":{
+              "value": 0
+            }
+          }
+        },
+        "arm":{
+          "skills":{
+            "arm":{
+              "value": 0
+            },
+            "dis":{
+              "value": 0
+            },
+            "for":{
+              "value": 0
+            },
+            "shm":{
+              "value": 0
+            }
+          }
+        }
+      }
+    }
+  },
+  "Item": {
+    "types": ["item"],
+    "templates": {
+      "base": {
+        "description": ""
+      }
+    },
+    "item": {
+      "templates": ["base"],
+      "quantity": 1,
+      "weight": 0
+    }
+  }
+}
